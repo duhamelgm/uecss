@@ -1,2 +1,16 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background: #444; }
+  background: #444;
+  margin: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+nav {
+  display: flex; }
+
+.nav-link {
+  text-decoration: none;
+  color: #fff; }
