@@ -12,23 +12,23 @@
     <title>CSS</title>
 </head>
 <body>
-    <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
+    <main>
+        <header>
+            <nav class="menu-nav-normal" id="navbar">
+                <div class="menu-item">
+                    <a href="" class="nav-item active">Inicio</a>
+                    <a href="" class="nav-item">Mision</a>
+                    <a href="" class="nav-item">Vision</a>
+                    <a href="" class="nav-item">Departamento de Primaria</a>
+                    <a href="" class="nav-item">Departamendo de Secundaria</a>
+                </div>
+                
+                <a href="javascript:void(0);" class="menu-btn-icon" onclick="headerButtonDisplay()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
 
-        <nav class="menu-nav">
-            <a href="" class="nav-item active">Inicio</a>
-            <a href="" class="nav-item">Mision</a>
-            <a href="" class="nav-item">Vision</a>
-            <a href="" class="nav-item">Departamento de Primaria</a>
-            <a href="" class="nav-item">Departamendo de Secundaria</a>
-        </nav>
-    </header>
-
-    <main id="home-image">
         <img src="./img/base.jpg" alt="">
     </main>
 
@@ -37,5 +37,7 @@
             
         </div>
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
