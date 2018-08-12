@@ -1,20 +1,20 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0; }
 
 body {
-  background: #e0f2e9;
+  background: #e4e4e4;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
 
-main {
-  height: 100vh; }
-  main img {
-    width: 100%; }
+.container {
+  width: 90%;
+  margin: auto; }
 
 nav {
   display: flex;
-  background: #0c1821; }
+  background: #023436; }
   nav .menu-item {
     display: flex; }
   nav a {
@@ -29,9 +29,74 @@ nav {
   nav .menu-btn-icon {
     display: none; }
 
+#showcase {
+  position: absolute;
+  width: 100%; }
+  #showcase .container {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    grid-template-areas: 'title submit'; }
+    #showcase .container .title {
+      grid-area: title;
+      font-size: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px #969696; }
+    #showcase .container .login {
+      background: #fff;
+      grid-area: submit;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 50px 40px 50px;
+      -webkit-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      border-radius: 5px; }
+      #showcase .container .login h1 {
+        border-bottom: solid 2px #ccc;
+        margin: 0;
+        padding: 0; }
+      #showcase .container .login .login-row {
+        display: flex;
+        align-items: center; }
+        #showcase .container .login .login-row i {
+          padding-right: 5px; }
+        #showcase .container .login .login-row input {
+          margin-left: auto; }
+      #showcase .container .login .text-input {
+        padding: 5px 80px 5px 5px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 2px; }
+      #showcase .container .login .button-1 {
+        margin-top: 10px;
+        padding: 6px;
+        border: none;
+        width: 80px;
+        background: #4CAF50;
+        border-radius: 2px; }
+
+#background {
+  /*background: url(../img/base.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 1500px;*/ }
+  #background img {
+    min-width: 100%;
+    min-height: 70vh; }
+
+footer {
+  min-height: 22vh;
+  text-align: center; }
+  footer .container {
+    border-top: solid 2px #a0a0a0; }
+    footer .container h3 {
+      padding: 10px; }
+
 @media screen and (min-width: 600px) {
   .active {
-    background: lightcoral; } }
+    background: #70a9a1; } }
 
 @media screen and (max-width: 600px) {
   .menu-nav-normal .menu-item a:not(:first-child) {
