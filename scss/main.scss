@@ -162,6 +162,10 @@ nav{
 
         img{
             width: 50%;
+
+            .img-impar{
+                order: 1;
+            }
         }
 
         .logo{
@@ -181,6 +185,24 @@ nav{
                 font-size: 3.5rem;
             }
 
+        }
+    }
+
+    .section.section-even{
+        .text{
+            order: 1;
+        }
+        img{
+            order: 2;
+        }
+    }
+
+    .section.section-odd{
+        .text{
+            order: 2;
+        }
+        img{
+            order: 1;
         }
     }
 }
@@ -337,6 +359,24 @@ footer{
             flex-direction: column;
             h1{
                 margin: 0;
+            }
+        }
+
+        .section.section-even{
+            .text{
+                order: 1;
+            }
+            img{
+                order: 1;
+            }
+        }
+    
+        .section.section-odd{
+            .text{
+                order: 1;
+            }
+            img{
+                order: 1;
             }
         }
     }
