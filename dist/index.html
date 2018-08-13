@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,6 @@
             <nav class="menu-nav-normal" id="navbar">
                 <div class="menu-item">
                     <a href="" class="nav-item active">Inicio</a>
-                    <a href="" class="nav-item">Mision</a>
-                    <a href="" class="nav-item">Vision</a>
                     <a href="" class="nav-item">Departamento de Primaria</a>
                     <a href="" class="nav-item">Departamendo de Secundaria</a>
                 </div>
@@ -31,12 +29,11 @@
     </main>
 
     <div id="showcase">
-        <div class="container">
+        <div class="title-container">
             <div class="title">
                 <h1>U.E. Colegio Santisimo Salvador</h1>
             </div>
-    
-            <div class="login">
+            <form action="" class="login">
                 <h1>Iniciar Sesion</h1>
                 <div class="login-row">
                     <i class="fas fa-user fa-lg"></i>
@@ -46,21 +43,71 @@
                     <i class="fas fa-key fa-lg"></i>
                     <input class="text-input" type="text" placeholder="Password">
                 </div>
-                <button type="submit" class="button-1">Submit</button>
+                <input type="submit" value="Login" class="button-1 button-hover">
+            </form>
+        </div>
+    </div>
+
+    <div id="background"></div>
+
+    <div class="content">
+        <div class="container">
+            <div class="section">
+                <div class="text">
+                    <h1>Mision</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vitae aliquid facere mollitia nostrum architecto impedit cum modi, consequatur aut eaque et sapiente dolor. Accusantium suscipit saepe explicabo alias minus! Quos consequatur maxime aliquid vero, voluptatum officia perferendis eius, illum eos commodi fuga optio adipisci id explicabo, tempora earum quod.</p>
+                </div>
+                <img class="logo" src="./img/logo.jpg" alt="">
+            </div>
+            <div class="section">
+                <div class="text">
+                    <h1>Vision</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus autem iste nobis commodi laboriosam vel quod molestiae dolorem eos odio quae itaque, fugit quam corporis assumenda quidem repellat voluptatem architecto reiciendis illum delectus mollitia libero dolor? Vel reprehenderit ut, illum sint eveniet rerum iusto sunt quisquam nam. Totam, debitis esse.</p>
+                </div>
+                <img src="./img/happykids.png" alt="">
             </div>
         </div>
     </div>
 
-    <div id="background"><img src="./img/base-2.jpg" alt=""></div>
+
+    <div class="contact-section">
+        <div class="container">
+            <form action="" class="email">
+                <label for="fname">Nombre</label>
+                <input type="text" id="fname" name="firstname" placeholder="Nombres...">
+
+                <label for="lname">Apellido</label>
+                <input type="text" id="lname" name="lastname" placeholder="Apellidos...">
+
+                <label for="subject">Correo</label>
+                <input type="email" id="email" name="email" placeholder="Correo...">
+
+                <label for="subject">Asuntos</label>
+                <textarea id="subject" name="subject" placeholder="Por favor explique su asunto a tratar..."></textarea>
+
+                <input type="submit" value="Enviar" class="button-hover">
+            </form>
+            <div class="information">
+                <div class="direccion">
+                    <h1>Direccion</h1>
+                    <h3>Av. Ferrero Tamayo del Sector las Mercedes, Pueblo Nuevo, Parroquia "San Juan Bautista"</h3>
+                    <h3>Municipio San Cristóbal, Edo. Táchira.</h3>
+                    <h3>Teléfono 0276-3435839</h3>
+                </div>
+                <div class="contact">
+                    <h1>Contactanos</h1>
+                    <h3><i class="fas fa-envelope"></i> soporte.santisimo@gmail.com</h3>
+                    <h3><a href="https://www.facebook.com/ColegioSantisimoSalvador"><i class="fab fa-facebook"></i> Facebook</a></h3>
+                    <h3><a href="https://twitter.com/uesalvador?lang=es"><i class="fab fa-twitter"></i> Twitter</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <div class="container">
-            <h3>Av. Ferrero Tamayo del Sector las Mercedes, Pueblo Nuevo, Parroquia "San Juan Bautista"</h3>
-            <h3>Municipio San Cristóbal, Edo. Táchira. Teléfono 0276-3435839</h3>
-            <h3>Correo Electrónico: soporte.santisimo@gmail.com</h3>
-        </div>
+        <h3>Copyrigth &copy; 2018</h3>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js"></script> 
 </body>
 </html>

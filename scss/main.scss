@@ -1,25 +1,43 @@
 $primary-color: #ffffff;
 $secondary-color: #023436;
 $auxiliar-color: #70a9a1;
+@import url('https://fonts.googleapis.com/css?family=Palanquin|Roboto+Condensed');
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
+//Global
 
 body{
     background: #e4e4e4;
-
+    padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    //font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+
     line-height: 1.5;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .container{
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
+
+.button-hover{
+    cursor: pointer;
+    background: #4CAF50;
+    transition: background 200ms;
+}
+
+.button-hover:hover{
+    cursor: pointer;
+    background: rgb(64, 148, 67);
+}
+
+//NAVBAR
 
 nav{
 
@@ -41,6 +59,7 @@ nav{
 
     a:hover{
         background: #0d5d56;
+        transition: background 200ms;
     }
 
     .menu-btn-icon{
@@ -48,11 +67,15 @@ nav{
     }
 }
 
+//MAIN SHOWCASE
+
 #showcase{
     position: absolute;
     width: 100%;
 
-    .container{
+    .title-container{
+        width: 90%;
+        margin: auto;
         display: grid;
         justify-content: space-between;
         align-items: center;
@@ -71,7 +94,7 @@ nav{
             grid-area: submit;
             display: flex;
             flex-direction: column;
-            padding: 20px 50px 40px 50px;
+            padding: 20px 40px 40px 40px;
             -webkit-box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
             -moz-box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
             box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
@@ -81,6 +104,7 @@ nav{
                 border-bottom: solid 2px #ccc;
                 margin: 0;
                 padding: 0;
+                margin-bottom: 10px;
             }
 
             .login-row{
@@ -97,92 +121,243 @@ nav{
             }
 
             .text-input{
-                padding: 5px 80px 5px 5px;
+                padding: 12px 80px 12px 12px;
                 margin-top: 10px;
                 border: 1px solid #ccc;
                 border-radius: 2px;
             }
 
-            .button-1{
-                margin-top: 10px;
-                padding: 6px;
-                border: none;
+            input.button-1{
+                margin-top: 15px;
+                padding: 10px;
                 width: 80px;
-                background: #4CAF50;
-                border-radius: 2px;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 1rem;
             }
         }
     }
 }
 
+//BACKGROUND
+
 #background{
-    /*background: url(../img/base.jpg);
+    background: url(../img/base-2.jpg);
+    height: 600px;
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: 1500px;*/
-    img{
-        min-width: 100%;
-        min-height: 70vh;
-    }
+    //background-position-y: -100px;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-footer{
-    min-height: 22vh;
-    text-align: center;
+//CONTENT
 
-    .container{
-        border-top: solid 2px rgb(160, 160, 160);
+.content{
+    .section{
+        border-top: 2px solid #ccc;
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
 
-        h3{
-            padding: 10px;
+        img{
+            width: 50%;
+        }
+
+        .logo{
+            padding: 20px;
+            background: #fff;
+            -webkit-box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
+            -moz-box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
+            box-shadow: 11px 10px 41px -3px rgba(0,0,0,0.3);
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            
+            h1{
+                font-size: 3.5rem;
+            }
+
         }
     }
 }
 
-@media screen and (min-width: 600px){
+//CONTACT
+
+.contact-section{
+    text-align: center;
+    margin-bottom: 50px;
+
+    .container{
+        border-top: solid 2px rgb(160, 160, 160);
+        display: flex;
+        justify-content: space-around;
+
+        .email{
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-size: 1.3rem;
+
+            label{
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            input[type=text]{
+                padding: 12px;
+                border-radius: 4px;
+                border: solid 1px #ccc;
+                margin: 0 5px 0 5px;
+            }
+
+            input[type=email]{
+                padding: 12px;
+                border-radius: 4px;
+                border: solid 1px #ccc;
+                margin: 0 5px 0 5px;
+            }
+
+            input[type=submit]{
+                margin: 20px 5px 0 5px;
+                padding: 12px;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 1.1rem;
+            }
+
+            textarea{
+                resize: vertical;
+                padding: 5px;
+                height: 200px;
+                margin: 0 5px 0 5px;
+                border-radius: 4px;
+                border: solid 1px #ccc;
+            }
+        }
+
+        .information{
+            flex-basis: 40%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            a:hover{
+                .fa-facebook{
+                    color: #3b5998;
+                    transition: color 100ms;
+                }
+                .fa-twitter{
+                    color: #00aced;
+                    transition: color 100ms;
+                }
+            }
+
+            h3{
+                padding: 10px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+//FOOTER
+
+footer{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #023436;
+    h3{
+        margin: 0;
+        padding: 10px;
+        color: rgb(199, 199, 199);
+        font-weight: normal;
+    }
+}
+
+/*Media Query*/
+
+@media screen and (min-width: 651px){
     .active{
         background: $auxiliar-color;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     .menu-nav-normal{
+        overflow: hidden;
 
-        .menu-item a:not(:first-child){
-            display:none;
+        .menu-item{
+            flex-direction: column;
+            max-height: 53px;
+            transition: max-height 500ms ease-out;
+            a{
+                text-align: left;
+            }
         }
         a.menu-btn-icon{
             display: block;
             margin-left: auto;
             float: right;
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-    .menu-nav-normal.menu-nav-responsive{
-        position: relative;
-        display: block;
-        overflow: hidden;
-
-        a.menu-btn-icon{
             position: absolute;
             right: 0;
             top: 0;
         }
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .menu-nav-normal.menu-nav-responsive{
+        position: relative;
+        display: block;
 
         .menu-item{
-            display: block;
-        }
-
-        .menu-item a{
-            float: none;
-            display: block;
-            text-align: left;
+            overflow: unset;
+            height: auto;
+            max-height: 180px;
+            transition: max-height 500ms ease-out;
         }
     }
 
 }
 
+@media screen and (max-width:800px) {
+
+    .content{
+        .section{
+            flex-direction: column;
+            h1{
+                margin: 0;
+            }
+        }
+    }
+
+    .contact-section{
+        .container{
+            flex-direction: column;
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    #showcase{
+        .title-container{
+            grid-template-areas: 'title' 'submit';
+            .title{
+                text-align: center;
+            }
+        }
+    }
+}
