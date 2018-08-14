@@ -21,7 +21,8 @@ a {
 
 .button-hover:hover {
   cursor: pointer;
-  background: #409443; }
+  background: #409443;
+  transition: background 200ms; }
 
 nav {
   display: flex;
@@ -29,15 +30,16 @@ nav {
   nav .menu-item {
     display: flex; }
   nav a {
-    color: #fff;
+    color: #d8d8d8;
     display: block;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    text-align: center; }
+    text-align: center;
+    transition: color 500ms; }
   nav a:hover {
-    background: #0d5d56;
-    transition: background 200ms; }
+    color: #fff;
+    transition: color 500ms; }
   nav .menu-btn-icon {
     display: none; }
 
@@ -201,10 +203,73 @@ footer {
     color: #c7c7c7;
     font-weight: normal; }
 
+/*ACEC*/
+.acec {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .acec .container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-areas: "main card1" "main card2"; }
+    .acec .container .topcard {
+      text-align: center;
+      align-self: center;
+      padding: 50px;
+      margin: 20px;
+      grid-area: main;
+      border-radius: 4px;
+      background: #fff;
+      -webkit-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3); }
+      .acec .container .topcard img {
+        width: 100%; }
+    .acec .container .card1 {
+      margin: 20px;
+      grid-area: card1;
+      text-align: center;
+      place-self: center;
+      padding: 20px;
+      padding-bottom: 30px;
+      border-radius: 4px;
+      background: #fff;
+      -webkit-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3); }
+      .acec .container .card1 h1 {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px; }
+      .acec .container .card1 i {
+        width: 50%;
+        transition: color 500ms; }
+      .acec .container .card1 i:hover {
+        color: #e02c2c;
+        transition: color 500ms; }
+    .acec .container .card2 {
+      margin: 20px;
+      grid-area: card2;
+      text-align: center;
+      place-self: center;
+      padding: 20px;
+      border-radius: 4px;
+      background: #fff;
+      -webkit-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3);
+      box-shadow: 11px 10px 41px -3px rgba(0, 0, 0, 0.3); }
+      .acec .container .card2 h1 {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px; }
+      .acec .container .card2 img {
+        width: 50%; }
+
 /*Media Query*/
+/*INICIO*/
 @media screen and (min-width: 651px) {
   .active {
-    background: #70a9a1; } }
+    background: #70a9a1;
+    color: #fff; } }
 
 @media screen and (max-width: 650px) {
   .menu-nav-normal {
@@ -230,7 +295,7 @@ footer {
     .menu-nav-normal.menu-nav-responsive .menu-item {
       overflow: unset;
       height: auto;
-      max-height: 180px;
+      max-height: 300px;
       transition: max-height 500ms ease-out; } }
 
 @media screen and (max-width: 800px) {
